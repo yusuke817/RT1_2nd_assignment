@@ -22,8 +22,7 @@ B.Speed_server_node is developped for changing the speed of the robot and resett
 <img width="288" alt="スクリーンショット 2021-11-16 14 10 54" src="https://user-images.githubusercontent.com/46062824/141991388-f6305256-7f0a-4914-846e-fbd821e94354.png">
 
 # How to execute
-roscore
-
+roscore &
 catkin_make
 
 rosrun second_assignment driving_node
@@ -40,7 +39,7 @@ C.input console(UI_node)
 You can give the robot four kinds of commands. One is the command for the change of the speeds. You can increase the speed when you input a, and decrease it when you input d. The other is the command for moving the robot into its original place. You can restart the movement of the robot from the original point anytime when you input r.
 
 # How to execute
-I made the file called "rt_1101" to realize the tasks. I added many comments in the code, so I would like you to read. 
+I made the folder called "second_assignment" to realize the tasks. I added many comments in the code, so I would like you to read. 
 
 <br>
 Mainly, I did two things. ①One was to get the information on golden boxes in the function of "find_token." (Line71-92) ②The other was implementation of catching silver boxes and avoiding the wall composed of golden boxes done in main function. (Line95-137) Each of the thresholds related to distances and angles is decided experimentally.
