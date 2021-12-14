@@ -12,7 +12,9 @@ There are two nodes I developped: driving_node and speed_server_node.
 <br>
 A.Driving_node is developped for controlling the movement of the robot.
 <br>
-B.Speed_server_node is developped for changing the speed of the robot and moving the robot to the initial position depending on the user inputs.
+B.Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
+
+<img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
 
 # Flowchart
 []([![Flowchart](https://i.gyazo.com/23ec5ad130141480e6bdb4d353887a55.jpg)](https://gyazo.com/23ec5ad130141480e6bdb4d353887a55))
