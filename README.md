@@ -54,4 +54,4 @@ Mainly, I did two things. ①One was to get the information on golden boxes in t
 # Result on YouTube
 Result is shown in the video below.
 <br>
-[![https://www.youtube.com/watch?v=FFKL9n6XOKk/0.jpg](https://www.youtube.com/watch?v=FFKL9n6XOKk)
+[![](https://www.youtube.com/watch?v=FFKL9n6XOKk/0.jpg)](https://www.youtube.com/watch?v=FFKL9n6XOKk)
