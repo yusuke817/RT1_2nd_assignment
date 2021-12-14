@@ -52,6 +52,6 @@ Mainly, I did two things. ①One was to get the information on golden boxes in t
 <img width="912" alt="スクリーンショット 2021-11-04 15 24 05" src="https://user-images.githubusercontent.com/46062824/140331417-4a72510d-57bc-4b91-9917-746d4e75997c.png">
 
 # Result on YouTube
-Result is shown in the video below.
+Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
 <br>
 [![](https://img.youtube.com/vi/FFKL9n6XOKk/0.jpg)](https://www.youtube.com/watch?v=FFKL9n6XOKk)
