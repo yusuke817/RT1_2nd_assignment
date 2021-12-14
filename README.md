@@ -39,8 +39,6 @@ rosrun second_assignment driving_node
 <br>
 rosrun second_assignment speed_server_node
 
-# Service
-
 ,,,
 float32 input
 ---
