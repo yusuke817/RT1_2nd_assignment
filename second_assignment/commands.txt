@@ -1,0 +1,10 @@
+catkin_make
+
+roscore &
+
+rosrun second_assignment driving_node
+rosrun second_assignment speed_server_node
+rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
+
+rosrun rqt_graph rqt_graph
+
