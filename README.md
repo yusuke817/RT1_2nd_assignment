@@ -39,6 +39,13 @@ rosrun second_assignment driving_node
 <br>
 rosrun second_assignment speed_server_node
 
+# Service
+'''
+float32 input
+---
+float32 output
+'''
+
 # The expalanation about each nodes
 A.control console(driving_node)
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. When the robot doesn't detect anything in front of it, it will move without decreasing the speed. On the other hand, when the robot detects something in front of it, it will decrease the speed. Also, in this case, depending on the place of the wall, the robot will decide the turning direction, such as turning right and turning left.
