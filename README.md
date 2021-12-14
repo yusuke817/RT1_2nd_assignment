@@ -66,6 +66,10 @@ Mainly, I did two things. ①One was to get the information on golden boxes in t
 <img width="1086" alt="スクリーンショット 2021-11-04 15 22 05" src="https://user-images.githubusercontent.com/46062824/140331404-b354c099-3601-4ae9-a7f3-1a78e9ff0350.png">
 <img width="912" alt="スクリーンショット 2021-11-04 15 24 05" src="https://user-images.githubusercontent.com/46062824/140331417-4a72510d-57bc-4b91-9917-746d4e75997c.png">
 
+# rqt-graph
+I made the folder called "second_assignment"
+<img width="1382" alt="RT2_rqt" src="https://user-images.githubusercontent.com/46062824/146010312-9e4327dd-0b36-4c1c-b1f4-5632a9c72ed9.png">
+
 # Result on YouTube
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
 <br>
