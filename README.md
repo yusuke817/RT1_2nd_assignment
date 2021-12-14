@@ -40,9 +40,7 @@ rosrun second_assignment driving_node
 rosrun second_assignment speed_server_node
 
 ,,,
-float32 input
----
-float32 output
+With services
 ,,,
 
 # The expalanation about each nodes
@@ -51,6 +49,8 @@ With pub-sub communications, I implemented the function of automatic driving. Af
 
 B.server console(speed_server_node)
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. One is the command for the change of the speeds. You can increase the speed when you input a, and decrease it when you input d. Another is the command for moving the robot into its original place. You can restart the movement of the robot from the original point anytime when you input r.
+<br>
+You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds 
 
 # How to execute
 I made the folder called "second_assignment" to realize the tasks. I added many comments in the code, so I would like you to read. 
