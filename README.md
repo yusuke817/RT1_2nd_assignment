@@ -65,7 +65,7 @@ Mainly, I did two things. ①One was to get the information on golden boxes in t
 ②Implementation of catching silver boxes and avoiding the wall composed of golden boxes
 
 # rqt-graph
-I made the folder called "second_assignment"
+I made the folder called "second_assignment." Driving node can get the user input from speed server node with the speed.srv.
 <img width="1382" alt="RT2_rqt" src="https://user-images.githubusercontent.com/46062824/146010312-9e4327dd-0b36-4c1c-b1f4-5632a9c72ed9.png">
 
 # Result on YouTube
