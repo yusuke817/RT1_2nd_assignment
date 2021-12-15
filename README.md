@@ -55,7 +55,7 @@ rosrun second_assignment speed_server_node
 
 # The expalanation about each nodes
 
-1. control console(driving_node)
+1. "driving_node" in control.cpp.
 
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
    - Driving stragightforward without decreasing the speed when the robot doesn't detect anything in front of it. 
@@ -64,7 +64,7 @@ With pub-sub communications, I implemented the function of automatic driving. Af
      - Just decreasing when the robot is close to both left and right walls.
      - Turning left when the robot is close to right wall.
 
-2. server console(speed_server_node)
+2. "speed_server_node" in interaction.cpp
 
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds. 
 <br>
@@ -74,7 +74,7 @@ With services, I implemented the function of the change of the speeds and resett
   - 'f' for terminating the node itself. 
 
 # rqt-graph
-I made the folder called "second_assignment." I show you the realationships between the nodes with rqt-graph. Driving node can get the user input from speed server node with the speed.srv.
+I made the folder called "second_assignment." I show you the realationships between the nodes with rqt-graph. Driving node sends the commands on the velocity to stageros node. Also, driving node can get the updated velocity based on user input from speed server node with the speed.srv.
 <img width="1382" alt="RT2_rqt" src="https://user-images.githubusercontent.com/46062824/146010312-9e4327dd-0b36-4c1c-b1f4-5632a9c72ed9.png">
 
 # Result on YouTube
