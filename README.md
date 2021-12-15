@@ -9,6 +9,8 @@ I learned how to use ROS expecially in Pub/Sub communications and services.
 ②An user can change the speed of the robot.
 
 # Explanation about the situation and implementation
+<br>
+
 The blue dot in the circuit is the robot controlled in this assignment.
 <br>
 There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
@@ -21,6 +23,8 @@ B.Speed_server_node is developped for changing the speed of the robot and resett
 
 # Flowchart
 The flowchart of the program is shown below.
+<br>
+
 ![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
 
 # How to execute
@@ -40,11 +44,9 @@ You should run the program with 3 nodes in each terminals respectively.
 ```
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
 ```
-<br>
 ```
 rosrun second_assignment driving_node
 ```
-<br>
 ```
 rosrun second_assignment speed_server_node
 ```
