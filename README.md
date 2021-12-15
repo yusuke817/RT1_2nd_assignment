@@ -28,17 +28,14 @@ The program can be run with 4 terminals shown below: main, stage_ros, the one fo
 <img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
 <br>
 1. Preparation
+You should run ros itself and compile the program.
 ```
 roscore &
-```
-<br>
-```
 catkin_make
 ```
 <br>
 2. Running
-<br>
-You can run the program with 3 nodes in each terminals respectively.
+You should run the program with 3 nodes in each terminals respectively.
 <br>
 ```
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
