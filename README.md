@@ -36,7 +36,6 @@ You should run ros itself and compile the program.
 roscore &
 catkin_make
 ```
-<br>
 2. Running
 You should run the program with 3 nodes in each terminals respectively.
 <br>
@@ -48,10 +47,6 @@ rosrun second_assignment driving_node
 ```
 ```
 rosrun second_assignment speed_server_node
-```
-
-```
-With services
 ```
 
 # The expalanation about each nodes
