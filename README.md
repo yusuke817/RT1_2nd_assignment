@@ -38,15 +38,20 @@ catkin_make
 ```
 2. Running
 You should run the program with 3 nodes in each terminals respectively.
-<br>
 ```
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
+```
+
 ```
 ```
 rosrun second_assignment driving_node
 ```
 ```
 rosrun second_assignment speed_server_node
+```
+
+```
+With services
 ```
 
 # The expalanation about each nodes
