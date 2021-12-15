@@ -14,9 +14,9 @@ The blue dot in the circuit is the robot controlled in this assignment.
 <br>
 There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
 <br>
-A.Driving_node is developped for controlling the movement of the robot.
+- Driving_node is developped for controlling the movement of the robot.
 <br>
-B.Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
+- Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
 
 <img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
 
@@ -31,12 +31,14 @@ The program can be run with 4 terminals shown below: main, stage_ros, the one fo
 <img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
 <br>
 1. Preparation
+<br>
 You should run ros itself and compile the program.
 ```
 roscore &
 catkin_make
 ```
 2. Running
+<br>
 You should run the program with 3 nodes in each terminals respectively.
 ```
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
@@ -50,15 +52,11 @@ rosrun second_assignment driving_node
 rosrun second_assignment speed_server_node
 ```
 
-```
-With services
-```
-
 # The expalanation about each nodes
-A.control console(driving_node)
+- control console(driving_node)
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. When the robot doesn't detect anything in front of it, it will move without decreasing the speed. On the other hand, when the robot detects something in front of it, it will decrease the speed. Also, in this case, depending on the place of the wall, the robot will decide the turning direction, such as turning right and turning left.
 
-B.server console(speed_server_node)
+- server console(speed_server_node)
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. One is the command for the change of the speeds. You can increase the speed when you input a, and decrease it when you input d. Another is the command for moving the robot into its original place. You can restart the movement of the robot from the original point anytime when you input r.
 <br>
 You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds 
