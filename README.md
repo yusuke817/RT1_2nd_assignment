@@ -20,25 +20,37 @@ B.Speed_server_node is developped for changing the speed of the robot and resett
 <img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
 
 # Flowchart
+The flowchart of the program is shown below.
 ![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
 
 # How to execute
+The program can be run with 4 terminals shown below: main, stage_ros, the one for driving_node and the one for speed_server_node.
 <img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
 <br>
 1. Preparation
+```
 roscore &
+```
 <br>
+```
 catkin_make
+```
 <br>
 2. Running
 <br>
 You can run the program with 3 nodes in each terminals respectively.
 <br>
+```
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
+```
 <br>
+```
 rosrun second_assignment driving_node
+```
 <br>
+```
 rosrun second_assignment speed_server_node
+```
 
 ```
 With services
