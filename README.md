@@ -20,7 +20,7 @@ B.Speed_server_node is developped for changing the speed of the robot and resett
 <img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
 
 # Flowchart
-<img width="288" alt="スクリーンショット 2021-11-16 14 10 54" src="https://user-images.githubusercontent.com/46062824/141991388-f6305256-7f0a-4914-846e-fbd821e94354.png">
+![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
 
 # How to execute
 <img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
