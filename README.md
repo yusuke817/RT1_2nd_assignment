@@ -30,6 +30,7 @@ The program can be run with 4 terminals shown below: main, stage_ros, the one fo
 <img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
 <br>
 1. Preparation
+
 You should run ros itself and compile the program.
 
 ```
@@ -37,6 +38,7 @@ roscore &
 catkin_make
 ```
 2. Running
+
 You should run the program with 3 nodes in each terminals respectively.
 
 ```
@@ -52,8 +54,9 @@ rosrun second_assignment speed_server_node
 ```
 
 # The expalanation about each nodes
+
 - control console(driving_node)
-<br>
+
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
   - Driving stragightforward without decreasing the speed When the robot doesn't detect anything in front of it, it will move . 
   - Decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction
@@ -62,6 +65,7 @@ With pub-sub communications, I implemented the function of automatic driving. Af
     - Turning left when the robot is close to right wall.
 
 - server console(speed_server_node)
+
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds 
 <br>
   - 'a' for increasing the speed 
