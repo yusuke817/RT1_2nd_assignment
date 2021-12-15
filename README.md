@@ -10,7 +10,6 @@ I learned how to use ROS expecially in Pub/Sub communications and services.
 
 # Explanation about the situation and implementation
 <br>
-
 The blue dot in the circuit is the robot controlled in this assignment.
 <br>
 There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
