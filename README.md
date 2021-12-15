@@ -72,7 +72,7 @@ With services, I implemented the function of the change of the speeds and resett
   - 'r' for resetting the postion and the speed. You can move the robot into its original place anytime.
   - 'f' for terminating the node itself. 
 
-# The expalanation about each nodes for operation
+# How to develop each nodes
 
 1. "driving_node" in control.cpp.
 
