@@ -9,7 +9,6 @@ I learned how to use ROS expecially in Pub/Sub communications and services.
 ②An user can change the speed of the robot.
 
 # Explanation about the situation and implementation
-<br>
 The blue dot in the circuit is the robot controlled in this assignment.
 <br>
 There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
@@ -54,7 +53,9 @@ rosrun second_assignment speed_server_node
 
 # The expalanation about each nodes
 - control console(driving_node)
-With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. When the robot doesn't detect anything in front of it, it will move without decreasing the speed. On the other hand, when the robot detects something in front of it, it will decrease the speed. Also, in this case, depending on the place of the wall, the robot will decide the turning direction, such as turning right and turning left.
+With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
+- Driving stragightforward without decreasing the speed When the robot doesn't detect anything in front of it, it will move . 
+- decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction, such as turning right and turning left.
 
 - server console(speed_server_node)
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. One is the command for the change of the speeds. You can increase the speed when you input a, and decrease it when you input d. Another is the command for moving the robot into its original place. You can restart the movement of the robot from the original point anytime when you input r.
