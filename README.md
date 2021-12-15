@@ -13,9 +13,9 @@ The blue dot in the circuit is the robot controlled in this assignment.
 <br>
 There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
 <br>
-- Driving_node is developped for controlling the movement of the robot.
+1. Driving_node is developped for controlling the movement of the robot.
 <br>
-- Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
+2. Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
 
 <img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
 
