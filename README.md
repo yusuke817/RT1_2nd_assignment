@@ -58,17 +58,17 @@ rosrun second_assignment speed_server_node
 - control console(driving_node)
 
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
-    - Driving stragightforward without decreasing the speed When the robot doesn't detect anything in front of it, it will move . 
-    - Decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction
-      - Turning right when the robot is close to left wall.
-      - Just decreasing when the robot is close to both left and right walls.
-      - Turning left when the robot is close to right wall.
+   - Driving stragightforward without decreasing the speed When the robot doesn't detect anything in front of it, it will move . 
+   - Decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction
+     - Turning right when the robot is close to left wall.
+     - Just decreasing when the robot is close to both left and right walls.
+     - Turning left when the robot is close to right wall.
 
 - server console(speed_server_node)
 
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds 
 <br>
-   - 'a' for increasing the speed 
+  - 'a' for increasing the speed 
   - 'd' for increasing the speed
   - 'r' for resetting the postion and the speed. You can move the robot into its original place anytime.
   - 'f' for terminating the node itself. 
