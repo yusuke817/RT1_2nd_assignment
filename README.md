@@ -1,6 +1,9 @@
 # RT1_2nd_assignment
 
 # Purpose
+I learned how to use ROS expecially in Pub/Sub communications and services.
+
+# Tasks
 ①Robot can drive in the circuit automatically without crashing on the walls.
 <br>
 ②An user can change the speed of the robot.
