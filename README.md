@@ -87,7 +87,9 @@ There are four functions in control.cpp
 
 2. interaction.cpp including "speed_server_node" 
 
-There is only one main function in interaction.cpp. There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client.
+There is only one main function in interaction.cpp. 
+<br>
+There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client. The one part of the code is shown below.
 
 ```
 	while(1){
@@ -110,13 +112,6 @@ There is only one main function in interaction.cpp. There are three main process
 				     }
    		}
 ```
-
-With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds. 
-<br>
-  - 'a' for increasing the speed 
-  - 'd' for increasing the speed
-  - 'r' for resetting the postion and the speed. You can move the robot into its original place anytime.
-  - 'f' for terminating the node itself. 
 
 # rqt-graph
 I made the folder called "second_assignment." I show you the realationships between the nodes in rqt-graph. Driving node sends the commands on the velocity to stageros node. Also, driving node can get the updated velocity based on user input from speed server node with the speed.srv.
