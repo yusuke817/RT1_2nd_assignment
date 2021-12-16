@@ -78,7 +78,11 @@ This program has two source codes: control.cpp and interaction.cpp.
 
 1. control.cpp including "driving_node".
 
-There are four functions in control.cpp: ①sensor function, ②ScanCallback function, ③SpeedService function and ④main function. ①sensor function is for calculating the shortest distance in the array values collected with laser sensors. ②ScanCallback function is composed of three parts: ❶collection of the minimum distance in each three sections: right, front and left ❷segmentation the cases depending on the minimum distance ❸change of the linear and angular speeds based on the segmentation.
+There are four functions in control.cpp: ①sensor function, ②ScanCallback function, ③SpeedService function and ④main function.
+<br>
+①sensor function is for calculating the shortest distance in the array values collected with laser sensors.
+<br>
+②ScanCallback function is composed of three parts: ❶collection of the minimum distance in each three sections: right, front and left ❷segmentation the cases depending on the minimum distance ❸change of the linear and angular speeds based on the segmentation.
 
 <br>
 ❶collection code is shown below. This program collects the distance in all directions. The direction is divided into 3 parts: right with from 0th to 100th sensor, front with from 300th to 390th sensor and left with 620th to 720th sensor. 
@@ -112,6 +116,7 @@ There are four functions in control.cpp: ①sensor function, ②ScanCallback fun
 ```
 
 ❷segmentation and ❸change part are implemented with minimum distance derived in ❶collection and the threshold I set. The one part of the code is shown below.
+
 ```
 float dist_th = 1.5;// the threshold of the distance between the robot and walls
 
