@@ -89,6 +89,28 @@ There are four functions in control.cpp
 
 There is only one main function in interaction.cpp. There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client.
 
+```
+	while(1){
+	//guide for users
+	std::cout << "Increase: a or Decrease: d or Reset: z or Finish: f?\n";
+	//getting the user input
+	std::cin >> s;
+	
+	// when users want to increase the speed
+	if(s == 'a'){
+		//liniting the range of the speed
+		if(original > -100.0 && original <=3.5){
+		// increasing the speed
+		original += 0.5;
+		ROS_INFO("increase");
+		//storing the user input into the request of the server
+		speed_srv.request.input = original;
+		//sending a request to the server
+		client.call(speed_srv);
+		}
+   
+```
+
 With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds. 
 <br>
   - 'a' for increasing the speed 
