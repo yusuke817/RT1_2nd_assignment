@@ -97,17 +97,17 @@ There is only one main function in interaction.cpp. There are three main process
 	std::cin >> s;
 	
 	// when users want to increase the speed
-	if(s == 'a'){
-		//liniting the range of the speed
-		if(original > -100.0 && original <=3.5){
-		// increasing the speed
-		original += 0.5;
-		ROS_INFO("increase");
-		//storing the user input into the request of the server
-		speed_srv.request.input = original;
-		//sending a request to the server
-		client.call(speed_srv);
-		     }
+			if(s == 'a'){
+				//liniting the range of the speed
+				if(original > -100.0 && original <=3.5){
+				// increasing the speed
+				original += 0.5;
+				ROS_INFO("increase");
+				//storing the user input into the request of the server
+				speed_srv.request.input = original;
+				//sending a request to the server
+				client.call(speed_srv);
+				     }
    		}
 ```
 
