@@ -138,6 +138,49 @@ float dist_th = 1.5;// the threshold of the distance between the robot and walls
 
 ```
 
+③SpeedService function is composed of two parts: ❶changing the speed part and ❷ resetting the postion and speed part. ❶ If "res.input" is not -1000 which means that user did not give the reset command, the information on the speed is updated with speed.srv service. ❷ When user gives the reset command, the ros service call related to reset the position is called and resets the position and the speed. The part of the code is shown below.
+
+```
+bool SpeedService(second_assignment::speed::Request &req, second_assignment::speed::Response &res) {
+	ROS_INFO("serviceget");
+	// except "reset", the increment of the speed is updated
+	if (req.input != -1000.0){
+	plus = req.input;
+	res.output = plus;
+	ROS_INFO("change");
+	}
+	// in reset, resetting the position and the speed is done
+	else{
+	// resetting the position is done with the service call
+	ros::service::call("/reset_positions", res_server);
+	ROS_INFO("reset");
+	// resetting the speed is done as well
+	plus = 0;
+	original=0.0;
+	} 
+	return true;
+}
+```
+
+④In main function, subscibing base_scan topics and advertising the "speed" services to the client are done to run this node. The part of the code is shown below.
+```
+int main(int argc, char **argv)
+{
+	ROS_INFO("main");
+	
+	//initializing the node and setting up the node hundle
+    	ros::init(argc, argv, "driving_node");
+	ros::NodeHandle nh;	
+	//subscribing /base_scan topics
+	ros::Subscriber sub = nh.subscribe("/base_scan", 1, ScanCallback);
+	pub = nh.advertise<geometry_msgs::Twist> ("/cmd_vel", 1);
+	// advertising the "speed" services to the client
+	ros::ServiceServer service =  nh.advertiseService("/speed", SpeedService);
+	ros::spin();
+	return 0;
+}
+```
+
 2. interaction.cpp including "speed_server_node" 
 
 There is only one main function in interaction.cpp. There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client. The one part of the code is shown below.
@@ -172,3 +215,6 @@ I made the folder called "second_assignment." I show you the realationships betw
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
 <br>
 [![](https://img.youtube.com/vi/FFKL9n6XOKk/0.jpg)](https://www.youtube.com/watch?v=FFKL9n6XOKk)
+
+# Future work
+In this assignment, I set the limitation of the robot since the robot will crash against the wall when the speed is too big. With PID control, the quality of control will improve and robot will drive faster than now.
