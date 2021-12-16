@@ -84,7 +84,6 @@ There are four functions in control.cpp: ①sensor function, ②ScanCallback fun
 <br>
 ②ScanCallback function is composed of three parts: ❶collection of the minimum distance in each three sections: right, front and left ❷segmentation the cases depending on the minimum distance ❸change of the linear and angular speeds based on the segmentation.
 
-<br>
 ❶collection code is shown below. This program collects the distance in all directions. The direction is divided into 3 parts: right with from 0th to 100th sensor, front with from 300th to 390th sensor and left with 620th to 720th sensor. 
 ```
 	int ranges = msg->ranges.size();
