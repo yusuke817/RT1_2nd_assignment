@@ -29,7 +29,7 @@ int main (int argc, char **argv)
 		ROS_INFO("increase");
 		//storing the user input into the request of the server
 		speed_srv.request.input = original;
-		//calling the server
+		//sending a request to the server
 		client.call(speed_srv);
 		}
 		//stopping the increase when the speed is too much
