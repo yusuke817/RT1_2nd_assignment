@@ -78,18 +78,65 @@ This program has two source codes: control.cpp and interaction.cpp.
 
 1. control.cpp including "driving_node".
 
-There are four functions in control.cpp
-   - Driving stragightforward without decreasing the speed when the robot doesn't detect anything in front of it. 
-   - Decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction
-     - Turning right when the robot is close to left wall.
-     - Just decreasing when the robot is close to both left and right walls.
-     - Turning left when the robot is close to right wall.
+There are four functions in control.cpp: ①sensor function, ②ScanCallback function, ③SpeedService function and ④main function. ①sensor function is for calculating the shortest distance in the array values collected with laser sensors. ②ScanCallback function is composed of three parts: ❶collection of the minimum distance in each three sections: right, front and left ❷segmentation the cases depending on the minimum distance ❸change of the linear and angular speeds based on the segmentation.
+
+<br>
+❶collection code is shown below. This program collects the distance in all directions. The direction is divided into 3 parts: right with from 0th to 100th sensor, front with from 300th to 390th sensor and left with 620th to 720th sensor. 
+```
+	int ranges = msg->ranges.size();
+	float s[ranges];
+	for(int i =0; i<ranges; i++)
+	{
+		s[i]=msg->ranges[i];
+	}
+	// to get the information on the distance in each sectons: right, front and left.
+	float right[101];
+	float front[91];
+	float left[101];
+	
+	// right section
+	for (int k = 0; k <= 100; k++)
+	{
+		right[k] = s[k];
+	}
+	// front section
+	for (int k = 300; k <= 390; k++)
+	{
+		front[k-300] = s[k];
+	} 
+	// left section
+	for (int k = 620; k <= 720; k++)
+	{
+		left[k-620] = s[k];
+	}
+```
+
+❷segmentation and ❸change part are implemented with minimum distance derived in ❶collection and the threshold I set. The one part of the code is shown below.
+```
+float dist_th = 1.5;// the threshold of the distance between the robot and walls
+
+	if(sensor(front) <= dist_th)
+	{
+		// left wall is close
+		if(sensor(right)-sensor(left)> 0)
+		{
+			ROS_INFO("Turn right");
+			vel.linear.x = 0.5;
+			vel.angular.z = -1.0;
+		}
+		
+	}
+	
+	// observing the linear velocity 
+	ROS_INFO("%f", vel.linear.x);
+	// publishing the velocity 
+	pub.publish(vel);
+
+```
 
 2. interaction.cpp including "speed_server_node" 
 
-There is only one main function in interaction.cpp. 
-<br>
-There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client. The one part of the code is shown below.
+There is only one main function in interaction.cpp. There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client. The one part of the code is shown below.
 
 ```
 	while(1){
