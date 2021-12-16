@@ -54,7 +54,7 @@ rosrun second_assignment speed_server_node
 
 # The expalanation about each nodes for operation
 
-1. "driving_node" in control.cpp.
+## 1. "driving_node" in control.cpp.
 
 With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
    - Driving stragightforward without decreasing the speed when the robot doesn't detect anything in front of it. 
@@ -181,7 +181,7 @@ int main(int argc, char **argv)
 }
 ```
 
-2. interaction.cpp including "speed_server_node" 
+## 2. interaction.cpp including "speed_server_node" 
 
 There is only one main function in interaction.cpp. There are three main processes: ①getting user input, ②storing the user input into the request of the server and ③sending a request to the server as a client. The one part of the code is shown below.
 
